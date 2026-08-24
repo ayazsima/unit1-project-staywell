@@ -1,4 +1,4 @@
-import { wellnessData } from "../data/welnessData";
+import { wellnessData } from "../data/wellnessData";
 
 export default function DailyPlan({ selectedGoal, selectedTime }) {
     const goalData = wellnessData[selectedGoal];
