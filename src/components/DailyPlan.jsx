@@ -5,27 +5,32 @@ export default function DailyPlan({ selectedGoal, selectedTime }) {
     const dailyPlan = goalData.plans[selectedTime];
 
     return (
-        <div>
+        <div className="daily-plan">
             <h2> Your Daily Plan </h2>
 
-            <h3> Healthy Habits </h3>
+            <div className="habits-section">
+                <h3>Healthy Habits</h3>
 
-            {goalData.habits.map((habit) => (
-                <p key={habit}>
-                    ✓ {habit}
-                </p>
-
-            ))}
-
-            <h3>
-                Your {selectedTime === 30 ? "30+" : selectedTime} Minute Plan
-            </h3>
-
-            {dailyPlan.map((activity) => (
-                <p key={activity}>
-                    {activity}
-                </p>
-            ))}
+                <ul className="habit-list">
+                    {goalData.habits.map((habit) => (
+                        <li key={habit}>
+                            ✓ {habit}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className="activities-section">
+                <h3>
+                    Your {selectedTime === 30 ? "30+" : selectedTime} Minute Plan
+                </h3>
+                <div className="activity-list">
+                    {dailyPlan.map((activity) => (
+                        <p key={activity}>
+                            {activity}
+                        </p>
+                    ))}
+                </div>
+            </div>
         </div>
 
     );
