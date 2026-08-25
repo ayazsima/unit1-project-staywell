@@ -7,17 +7,20 @@ export default function GoalSelector({ selectedGoal, setSelectedGoal }) {
         "Improve Digestion"
     ];
     return (
-        <div>
+        <section className="goal-section">
             <h2>What would you improve today?</h2>
             <p>Choose one wellness goal.</p>
 
-            {goals.map((goal) => (
-                <button key={goal}
-                    onClick={() => setSelectedGoal(goal)}> {goal} </button>
-            ))}
-            {selectedGoal && (
-                <p>You selected: {selectedGoal}</p>
-            )}
-        </div>
+            <div className="goal-options">
+                {goals.map((goal) => (
+                    <button
+                        className={selectedGoal === goal ? "goal-button selected" : "goal-button"}
+                        key={goal}
+                        onClick={() => setSelectedGoal(goal)}>
+                        {goal}
+                    </button>
+                ))}
+            </div>
+        </section>
     );
 }

@@ -15,7 +15,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="app-container">
       <h1>StayWell</h1>
 
       <GoalSelector
