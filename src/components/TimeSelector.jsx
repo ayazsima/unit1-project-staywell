@@ -1,3 +1,5 @@
+import "./TimeSelector.css";
+
 export default function TimeSelector({ selectedTime, setSelectedTime }) {
     const times = [5, 15, 30];
     return (

@@ -1,3 +1,5 @@
+import "./GoalSelector.css";
+
 export default function GoalSelector({ selectedGoal, setSelectedGoal }) {
     const goals = [
         "Boost Energy",
