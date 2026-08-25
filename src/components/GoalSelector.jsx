@@ -17,9 +17,6 @@ export default function GoalSelector({ selectedGoal, setSelectedGoal }) {
                         key={goal}
                         onClick={() => setSelectedGoal(goal)}> {goal} </button>
                 ))}
-                {selectedGoal && (
-                    <p>You selected: {selectedGoal}</p>
-                )}
             </div>
         </section>
     );

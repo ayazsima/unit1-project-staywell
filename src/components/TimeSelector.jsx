@@ -12,13 +12,6 @@ export default function TimeSelector({ selectedTime, setSelectedTime }) {
                         {time === 30 ? "30+ minutes" : `${time} minutes`}
                     </button>
                 ))}
-
-                {selectedTime && (
-                    <p>
-                        Your selected time:{" "}
-                        {selectedTime === 30 ? "30+ minutes" : `${selectedTime} minutes`}
-                    </p>
-                )}
             </div>
         </section>
     );
