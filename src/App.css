@@ -88,7 +88,12 @@ h1 {
   background-color: #f2f5f0;
   border-color: #2f6844;
 }
-
+.time-button.selected {
+  background-color: #bcd6b8;
+  border: 2px solid #35633d;
+  color: #1f4d28;
+  font-weight: bold;
+}
 .time-section p {
   margin-top: 15px;
   color: #555;
