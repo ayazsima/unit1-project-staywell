@@ -13,9 +13,12 @@ export default function GoalSelector({ selectedGoal, setSelectedGoal }) {
 
             <div className="goal-options">
                 {goals.map((goal) => (
-                    <button className="goal-button"
+                    <button
+                        className={selectedGoal === goal ? "goal-button selected" : "goal-button"}
                         key={goal}
-                        onClick={() => setSelectedGoal(goal)}> {goal} </button>
+                        onClick={() => setSelectedGoal(goal)}>
+                        {goal}
+                    </button>
                 ))}
             </div>
         </section>
