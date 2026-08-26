@@ -8,24 +8,27 @@
 }
 
 .plan-columns {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 25px;
 }
 
 .habits-section,
-.activities-section {
-  flex: 1;
+.activities-section,
+.supplements-section {
   background-color: white;
   border: 1px solid #ddd;
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 20px;
 }
 
 .habits-section h3,
-.activities-section h3 {
+.activities-section h3,
+.supplements-section h3 {
   text-align: center;
   color: #35633d;
+  margin-top: 0;
 }
 
 .habit-list {
@@ -33,13 +36,19 @@
   padding: 0;
 }
 
-.habit-list li {
-  margin: 15px 0;
-}
-
-.activity-list p {
+.habit-list li,
+.activity-list p,
+.supplements  {
   background-color: #f2f5f0;
   padding: 12px;
-  border-radius: 8px;
-  text-align: center;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+.supplements h4 {
+  margin: 0 0 6px;
+  color: #35633d;
+}
+
+.supplements p {
+  margin: 5px 0;
 }

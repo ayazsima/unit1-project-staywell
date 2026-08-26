@@ -23,7 +23,24 @@ export const wellnessData = {
                 "Prepare a balanced meal with protein and fiber",
                 "Prepare tomorrow's breakfast or snack"
             ]
-        }
+        },
+        supplements: [
+            {
+                name: "Vitamin B12",
+                purpose: "Supports normal energy metabolism",
+                tip: "Common food sources include eggs, dairy, fish, and fortified foods"
+            },
+            {
+                name: "Iron",
+                purpose: "Helps your body transport oxygen",
+                tip: "Iron supplements are best used when there is a real need or deficiency"
+            },
+            {
+                name: "CoQ10",
+                purpose: "Plays a role in cellular energy production",
+                tip: "CoQ10 has been studied for its possible effect on fatigue"
+            }
+        ]
     },
 
     "Sleep Better": {
@@ -50,7 +67,24 @@ export const wellnessData = {
                 "Spend 10 minutes doing a quiet activity",
                 "Prepare for a consistent wake-up time tomorrow"
             ]
-        }
+        },
+        supplements: [
+            {
+                name: "Magnesium",
+                purpose: "Supports normal muscle and nerve function",
+                tip: "Food sources include nuts, seeds, beans, and leafy greens"
+            },
+            {
+                name: "Melatonin",
+                purpose: "Helps regulate the sleep-wake cycle",
+                tip: "It is usually used for timing sleep rather than as a general sleep solution"
+            },
+            {
+                name: "Glycine",
+                purpose: "An amino acid that may support sleep quality",
+                tip: "Glycine is naturally produced by the body and is also found in protein-rich foods"
+            }
+        ]
     },
 
     "Reduce Stress": {
@@ -77,7 +111,24 @@ export const wellnessData = {
                 "Do gentle stretching",
                 "Write tomorrow's top three priorities"
             ]
-        }
+        },
+        supplements: [
+            {
+                name: "Magnesium",
+                purpose: "Supports normal nervous system function",
+                tip: "It is also naturally found in foods like nuts, seeds, beans, and greens"
+            },
+            {
+                name: "L-Theanine",
+                purpose: "Often discussed for relaxation and calm focus",
+                tip: "It is naturally found in tea leaves"
+            },
+            {
+                name: "Ashwagandha",
+                purpose: "An herb that has been studied for stress support",
+                tip: "It may interact with medications and is not appropriate for everyone"
+            }
+        ]
     },
 
     "Build Strength": {
@@ -104,7 +155,24 @@ export const wellnessData = {
                 "Record your exercises and reps",
                 "Prepare a balanced post-workout meal"
             ]
-        }
+        },
+        supplements: [
+            {
+                name: "Creatine",
+                purpose: "Supports strength and high-intensity exercise performance",
+                tip: "Creatine monohydrate is the most commonly studied form"
+            },
+            {
+                name: "Protein",
+                purpose: "Helps support muscle repair and growth",
+                tip: "Protein supplements are mainly useful when food intake does not meet your needs"
+            },
+            {
+                name: "Beta-Alanine",
+                purpose: "May support performance during high-intensity exercise",
+                tip: "It works by helping increase carnosine levels in muscle"
+            }
+        ]
     },
 
     "Improve Digestion": {
@@ -131,6 +199,23 @@ export const wellnessData = {
                 "Take a walk after eating",
                 "Write down one food or eating habit you want to observe"
             ]
-        }
+        },
+        supplements: [
+            {
+                name: "Probiotics",
+                purpose: "May support gut bacteria depending on the strain",
+                tip: "Different probiotic strains can have different effects"
+            },
+            {
+                name: "Fiber Supplement",
+                purpose: "Can help increase daily fiber intake",
+                tip: "Increase fiber gradually and drink enough fluids"
+            },
+            {
+                name: "Peppermint Oil",
+                purpose: "May help with some digestive symptoms",
+                tip: "Enteric-coated peppermint oil has been studied for IBS symptoms"
+            }
+        ]
     }
 };
