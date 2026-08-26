@@ -33,6 +33,17 @@ export default function DailyPlan({ selectedGoal, selectedTime }) {
                         ))}
                     </div>
                 </div>
+                <div className="supplements-section">
+                    <h3>Supplements</h3>
+
+                    {goalData.supplements.map((supplement) => (
+                        <div className="supplements" key={supplement.name}>
+                            <h4>{supplement.name}</h4>
+                            <p>{supplement.purpose}</p>
+                            <p><strong>Tip: </strong>{supplement.tip}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
 
