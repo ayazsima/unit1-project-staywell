@@ -1,7 +1,7 @@
 import { wellnessData } from "../data/wellnessData";
 import "./DailyPlan.css";
 
-export default function DailyPlan({ selectedGoal, selectedTime }) {
+export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }) {
     const goalData = wellnessData[selectedGoal];
     const dailyPlan = goalData.plans[selectedTime];
 
@@ -16,7 +16,7 @@ export default function DailyPlan({ selectedGoal, selectedTime }) {
                     <ul className="habit-list">
                         {goalData.habits.map((habit) => (
                             <li key={habit}>
-                                ✓ {habit}
+                                ☀️ {habit}
                             </li>
                         ))}
                     </ul>
@@ -28,7 +28,7 @@ export default function DailyPlan({ selectedGoal, selectedTime }) {
                     <div className="activity-list">
                         {dailyPlan.map((activity) => (
                             <p key={activity}>
-                                {activity}
+                                ⚡ {activity}
                             </p>
                         ))}
                     </div>
@@ -38,13 +38,16 @@ export default function DailyPlan({ selectedGoal, selectedTime }) {
 
                     {goalData.supplements.map((supplement) => (
                         <div className="supplements" key={supplement.name}>
-                            <h4>{supplement.name}</h4>
+                            <h4>🌿 {supplement.name}</h4>
                             <p>{supplement.purpose}</p>
                             <p><strong>Tip: </strong>{supplement.tip}</p>
                         </div>
                     ))}
                 </div>
             </div>
+            <button onClick={handleSavePlan}>
+                Save This Plan
+            </button>
         </div>
 
     );
