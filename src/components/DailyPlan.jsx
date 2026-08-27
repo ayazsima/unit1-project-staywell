@@ -1,7 +1,7 @@
 import { wellnessData } from "../data/wellnessData";
 import "./DailyPlan.css";
 
-export default function DailyPlan({ selectedGoal, selectedTime }) {
+export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }) {
     const goalData = wellnessData[selectedGoal];
     const dailyPlan = goalData.plans[selectedTime];
 
@@ -45,6 +45,9 @@ export default function DailyPlan({ selectedGoal, selectedTime }) {
                     ))}
                 </div>
             </div>
+            <button onClick={handleSavePlan}>
+                Save This Plan
+            </button>
         </div>
 
     );
