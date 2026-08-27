@@ -14,6 +14,7 @@ function App() {
   function handleGoalSelect(goal) {
     setSelectedGoal(goal);
     setSelectedTime("");
+    setSavedItems([]);
   }
 
   function handleSavePlan() {
