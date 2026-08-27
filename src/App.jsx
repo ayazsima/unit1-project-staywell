@@ -26,8 +26,7 @@ function App() {
       activities: goalData.plans[selectedTime],
       supplements: goalData.supplements
     };
-
-    setSavedItems([...savedItems, plan]);
+    setSavedItems([plan]);
   }
   return (
     <div className="app-container">

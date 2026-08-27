@@ -16,7 +16,7 @@ export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }
                     <ul className="habit-list">
                         {goalData.habits.map((habit) => (
                             <li key={habit}>
-                                ✓ {habit}
+                                ☀️ {habit}
                             </li>
                         ))}
                     </ul>
@@ -28,7 +28,7 @@ export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }
                     <div className="activity-list">
                         {dailyPlan.map((activity) => (
                             <p key={activity}>
-                                {activity}
+                                ⚡ {activity}
                             </p>
                         ))}
                     </div>
@@ -38,7 +38,7 @@ export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }
 
                     {goalData.supplements.map((supplement) => (
                         <div className="supplements" key={supplement.name}>
-                            <h4>{supplement.name}</h4>
+                            <h4>🌿 {supplement.name}</h4>
                             <p>{supplement.purpose}</p>
                             <p><strong>Tip: </strong>{supplement.tip}</p>
                         </div>
