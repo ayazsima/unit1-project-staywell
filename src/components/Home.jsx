@@ -1,6 +1,7 @@
 import GoalSelector from "./GoalSelector";
 import TimeSelector from "./TimeSelector";
 import DailyPlan from "./DailyPlan";
+import "./Home.css"
 
 export default function Home({
     selectedGoal,
@@ -11,6 +12,14 @@ export default function Home({
 }) {
     return (
         <>
+            <section className="home-intro">
+                <h2>Build a healthier day with StayWell</h2>
+
+                <p>
+                    Choose your wellness goal and available time to create a personalized daily plan.
+                </p>
+            </section>
+
             <GoalSelector
                 selectedGoal={selectedGoal}
                 setSelectedGoal={handleGoalSelect}

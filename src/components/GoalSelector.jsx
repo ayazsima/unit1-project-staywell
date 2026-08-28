@@ -11,8 +11,6 @@ export default function GoalSelector({ selectedGoal, setSelectedGoal }) {
     return (
         <section className="goal-section">
             <h2>What would you improve today?</h2>
-            <p>Choose one wellness goal.</p>
-
             <div className="goal-options">
                 {goals.map((goal) => (
                     <button
