@@ -8,6 +8,13 @@ h1 {
   color: #35633d;
   font-size: clamp(30px, 5vw, 48px);
 }
+#no-saved-plan {
+  text-align: center;
+  margin-top: 50px;
+  color: #35633d;
+  font-size: 18px;
+}
+
 @media (max-width: 768px) {
   .plan-columns {
     flex-direction: column;
