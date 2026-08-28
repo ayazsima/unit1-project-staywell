@@ -5,6 +5,8 @@ import TimeSelector from "./components/TimeSelector";
 import DailyPlan from "./components/DailyPlan";
 import SavedPlans from "./components/SavedPlans";
 import { wellnessData } from "./data/wellnessData";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [selectedGoal, setSelectedGoal] = useState("");
@@ -31,30 +33,33 @@ function App() {
     setSavedPlan(plan);
   }
   return (
-    <div className="app-container">
-      <h1>StayWell</h1>
+    <>
+      <main className="app-container">
+        <Header />
 
-      <GoalSelector
-        selectedGoal={selectedGoal}
-        setSelectedGoal={handleGoalSelect} />
-
-      {selectedGoal &&
-        <TimeSelector
-          selectedTime={selectedTime}
-          setSelectedTime={setSelectedTime} />
-      }
-      {selectedGoal && selectedTime && (
-        <DailyPlan
+        <GoalSelector
           selectedGoal={selectedGoal}
-          selectedTime={selectedTime}
-          handleSavePlan={handleSavePlan}
-        />
-      )}
-      {savedPlan && (
-        <SavedPlans savedPlan={savedPlan}
-          handleRemoveSavedPlan={handleRemoveSavedPlan} />
-      )}
-    </div>
+          setSelectedGoal={handleGoalSelect} />
+
+        {selectedGoal &&
+          <TimeSelector
+            selectedTime={selectedTime}
+            setSelectedTime={setSelectedTime} />
+        }
+        {selectedGoal && selectedTime && (
+          <DailyPlan
+            selectedGoal={selectedGoal}
+            selectedTime={selectedTime}
+            handleSavePlan={handleSavePlan}
+          />
+        )}
+        {savedPlan && (
+          <SavedPlans savedPlan={savedPlan}
+            handleRemoveSavedPlan={handleRemoveSavedPlan} />
+        )}
+        <Footer />
+      </main>
+    </>
   )
 }
 
