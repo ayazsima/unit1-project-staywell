@@ -1,32 +1,49 @@
-export default function SavedPlans({ savedItems }) {
+import "./DailyPlan.css";
+export default function SavedPlans({ savedPlan, handleRemoveSavedPlan }) {
     return (
-        <div>
-            <h2>Your Saved Plans</h2>
+        <div className="daily-plan">
+            <h2>Your Saved Plan</h2>
 
-            {savedItems.map((item, index) => (
-                <div key={index}>
-                    <h3>{item.goal} - {item.time} minutes</h3>
+            <h3>
+                {savedPlan.goal} - {savedPlan.time} minutes
+            </h3>
 
-                    <h4 id="saved-plan">Healthy Habits</h4>
-                    {item.habits.map((habit) => (
-                        <p key={habit}>☀️ {habit}</p>
-                    ))}
+            <div className="plan-columns">
 
-                    <h4>Your Plan</h4>
-                    {item.activities.map((activity) => (
-                        <p key={activity}>⚡ {activity}</p>
-                    ))}
+                <div className="habits-section">
+                    <h3>Healthy Habits</h3>
 
-                    <h4>Supplements</h4>
-                    {item.supplements.map((supplement) => (
-                        <div key={supplement.name}>
-                            <p><strong>🌿 {supplement.name}</strong></p>
+                    <div className="habit-list">
+                        {savedPlan.habits.map((habit) => (
+                            <p key={habit}>☀️ {habit}</p>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="activities-section">
+                    <h3>Your Plan</h3>
+
+                    <div className="activity-list">
+                        {savedPlan.activities.map((activity) => (
+                            <p key={activity}>⚡ {activity}</p>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="supplements-section">
+                    <h3>Supplements</h3>
+
+                    {savedPlan.supplements.map((supplement) => (
+                        <div className="supplements" key={supplement.name}>
+                            <p>🌿 <strong>{supplement.name}</strong></p>
                             <p>{supplement.purpose}</p>
-                            <p>{supplement.tip}</p>
+                            <p><strong>Tip:</strong> {supplement.tip}</p>
                         </div>
                     ))}
                 </div>
-            ))}
+
+            </div>
+            <button onClick={handleRemoveSavedPlan}>Remove Saved Plan</button>
         </div>
     );
 }
