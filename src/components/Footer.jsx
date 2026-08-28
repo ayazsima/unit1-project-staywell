@@ -1,7 +1,8 @@
 export default function Footer() {
+    let thisYear = new Date().getFullYear();
     return (
         <footer>
-            <p>© 2026 StayWell</p>
+            <p>&copy; {thisYear} StayWell</p>
         </footer>
     );
 }
