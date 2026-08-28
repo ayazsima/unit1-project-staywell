@@ -9,17 +9,16 @@ import { wellnessData } from "./data/wellnessData";
 function App() {
   const [selectedGoal, setSelectedGoal] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
-  const [savedItems, setSavedItems] = useState([]);
+  const [savedPlan, setSavedPlan] = useState(null);
 
   function handleGoalSelect(goal) {
     setSelectedGoal(goal);
     setSelectedTime("");
-    setSavedItems([]);
+    setSavedPlan(null);
   }
 
   function handleSavePlan() {
     const goalData = wellnessData[selectedGoal];
-
     const plan = {
       goal: selectedGoal,
       time: selectedTime,
@@ -27,7 +26,7 @@ function App() {
       activities: goalData.plans[selectedTime],
       supplements: goalData.supplements
     };
-    setSavedItems([plan]);
+    setSavedPlan(plan);
   }
   return (
     <div className="app-container">
@@ -49,8 +48,8 @@ function App() {
           handleSavePlan={handleSavePlan}
         />
       )}
-      {savedItems.length > 0 && (
-        <SavedPlans savedItems={savedItems} />
+      {savedPlan && (
+        <SavedPlans savedPlan={savedPlan} />
       )}
     </div>
   )
