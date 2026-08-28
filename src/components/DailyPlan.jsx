@@ -1,4 +1,5 @@
 import { wellnessData } from "../data/wellnessData";
+import Button from "./Button";
 import "./DailyPlan.css";
 
 export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }) {
@@ -45,9 +46,9 @@ export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }
                     ))}
                 </div>
             </div>
-            <button onClick={handleSavePlan}>
-                Save This Plan
-            </button>
+            <Button
+                text="Save This Plan"
+                onClick={handleSavePlan} />
         </div>
 
     );

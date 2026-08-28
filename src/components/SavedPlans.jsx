@@ -1,4 +1,6 @@
 import "./DailyPlan.css";
+import Button from "./Button";
+
 export default function SavedPlans({ savedPlan, handleRemoveSavedPlan }) {
     return (
         <div className="daily-plan">
@@ -43,7 +45,9 @@ export default function SavedPlans({ savedPlan, handleRemoveSavedPlan }) {
                 </div>
 
             </div>
-            <button onClick={handleRemoveSavedPlan}>Remove Saved Plan</button>
+            <Button
+                text="Remove Saved Plan"
+                onClick={handleRemoveSavedPlan} />
         </div>
     );
 }
