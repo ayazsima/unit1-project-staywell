@@ -1,17 +1,22 @@
 import "./App.css"
 import { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
 import GoalSelector from "./components/GoalSelector";
 import TimeSelector from "./components/TimeSelector";
 import DailyPlan from "./components/DailyPlan";
 import SavedPlans from "./components/SavedPlans";
-import { wellnessData } from "./data/wellnessData";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
+import About from "./components/About";
+import { wellnessData } from "./data/wellnessData";
 
 function App() {
   const [selectedGoal, setSelectedGoal] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [savedPlan, setSavedPlan] = useState(null);
+  const navigate = useNavigate();
 
   function handleGoalSelect(goal) {
     setSelectedGoal(goal);
@@ -31,32 +36,46 @@ function App() {
       supplements: goalData.supplements
     };
     setSavedPlan(plan);
+    navigate("/saved-plan");
   }
   return (
     <>
+      <Header />
+
       <main className="app-container">
-        <Header />
-
-        <GoalSelector
-          selectedGoal={selectedGoal}
-          setSelectedGoal={handleGoalSelect} />
-
-        {selectedGoal &&
-          <TimeSelector
-            selectedTime={selectedTime}
-            setSelectedTime={setSelectedTime} />
-        }
-        {selectedGoal && selectedTime && (
-          <DailyPlan
-            selectedGoal={selectedGoal}
-            selectedTime={selectedTime}
-            handleSavePlan={handleSavePlan}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                selectedGoal={selectedGoal}
+                selectedTime={selectedTime}
+                handleGoalSelect={handleGoalSelect}
+                setSelectedTime={setSelectedTime}
+                handleSavePlan={handleSavePlan}
+              />
+            }
           />
-        )}
-        {savedPlan && (
-          <SavedPlans savedPlan={savedPlan}
-            handleRemoveSavedPlan={handleRemoveSavedPlan} />
-        )}
+
+          <Route
+            path="/about"
+            element={<About />}
+          />
+
+          <Route
+            path="/saved-plan"
+            element={
+              savedPlan ? (
+                <SavedPlans
+                  savedPlan={savedPlan}
+                  handleRemoveSavedPlan={handleRemoveSavedPlan}
+                />
+              ) : (
+                <p id="no-saved-plan">No saved plan yet.</p>
+              )
+            }
+          />
+        </Routes>
         <Footer />
       </main>
     </>
