@@ -16,7 +16,9 @@ function App() {
     setSelectedTime("");
     setSavedPlan(null);
   }
-
+  function handleRemoveSavedPlan() {
+    setSavedPlan(null);
+  }
   function handleSavePlan() {
     const goalData = wellnessData[selectedGoal];
     const plan = {
@@ -49,7 +51,8 @@ function App() {
         />
       )}
       {savedPlan && (
-        <SavedPlans savedPlan={savedPlan} />
+        <SavedPlans savedPlan={savedPlan}
+          handleRemoveSavedPlan={handleRemoveSavedPlan} />
       )}
     </div>
   )
