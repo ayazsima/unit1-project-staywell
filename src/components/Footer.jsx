@@ -1,7 +1,7 @@
 export default function Footer() {
     let thisYear = new Date().getFullYear();
     return (
-        <footer>
+        <footer className="app-container">
             <p>&copy; {thisYear} StayWell</p>
         </footer>
     );
