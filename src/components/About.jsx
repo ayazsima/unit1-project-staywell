@@ -1,3 +1,4 @@
+import ContactForm from "./ContactForm";
 export default function About() {
     return (
         <section>
@@ -12,6 +13,7 @@ export default function About() {
                 The app provides healthy habits, daily activities, and supplement
                 information based on the user's selections.
             </p>
+            <ContactForm />
         </section>
     );
 }
