@@ -21,7 +21,7 @@ export default function Home({
                     </p>
                 </div>
                 <img
-                    src="/home.png"
+                    src="./home.png"
                     alt="Plant, water bottle, and lemon water representing a healthy lifestyle"
                     className="home-image"
                 />
