@@ -15,14 +15,17 @@ function App() {
   const [savedPlan, setSavedPlan] = useState(null);
   const navigate = useNavigate();
 
+  // Reset the time and saved plan when a new goal is selected
   function handleGoalSelect(goal) {
     setSelectedGoal(goal);
     setSelectedTime("");
     setSavedPlan(null);
   }
+  // Remove the saved plan
   function handleRemoveSavedPlan() {
     setSavedPlan(null);
   }
+  // Save the plan based on the selected goal and time
   function handleSavePlan() {
     const goalData = wellnessData[selectedGoal];
     const plan = {
