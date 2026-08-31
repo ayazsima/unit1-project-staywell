@@ -13,8 +13,23 @@ export default function ContactForm() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        if (!name || !email || !topic || !message) {
-            setMessageStatus("Please complete all fields.");
+        if (!name) {
+            setMessageStatus("Please enter your name.");
+            return;
+        }
+
+        if (!email) {
+            setMessageStatus("Please enter your email.");
+            return;
+        }
+
+        if (!topic) {
+            setMessageStatus("Please select a topic.");
+            return;
+        }
+
+        if (!message) {
+            setMessageStatus("Please enter a message.");
             return;
         }
 
