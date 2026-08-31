@@ -2,9 +2,6 @@ import "./App.css"
 import { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
-import GoalSelector from "./components/GoalSelector";
-import TimeSelector from "./components/TimeSelector";
-import DailyPlan from "./components/DailyPlan";
 import SavedPlans from "./components/SavedPlans";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
