@@ -1,5 +1,6 @@
 import { wellnessData } from "../data/wellnessData";
 import Button from "./Button";
+import HabitItem from "./HabitItem";
 import "./DailyPlan.css";
 
 export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }) {
@@ -17,9 +18,10 @@ export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }
 
                     <ul className="habit-list">
                         {goalData.habits.map((habit) => (
-                            <li key={habit}>
-                                ☀️ {habit}
-                            </li>
+                            <HabitItem
+                                key={habit}
+                                habit={habit}
+                            />
                         ))}
                     </ul>
                 </div>
