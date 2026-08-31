@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 import "./ContactForm.css";
 
 
@@ -68,7 +69,6 @@ export default function ContactForm() {
 
                 {messageStatus && <p>{messageStatus}</p>}
 
-                <button type="submit">Send Request</button>
                 <Button
                     text="Send Request"
                     type="submit" />
