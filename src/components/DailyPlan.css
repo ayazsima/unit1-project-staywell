@@ -52,3 +52,17 @@
 .supplements p {
   margin: 5px 0;
 }
+.saved-message {
+  text-align: center;
+  animation: popIn 0.5s;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

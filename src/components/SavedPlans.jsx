@@ -6,6 +6,10 @@ export default function SavedPlans({ savedPlan, handleRemoveSavedPlan }) {
         <div className="daily-plan">
             <h2>Your Saved Plan</h2>
 
+            <p className="saved-message">
+                🎉 Plan Saved!
+            </p>
+
             <h3>
                 {savedPlan.goal} - {savedPlan.time} minutes
             </h3>
