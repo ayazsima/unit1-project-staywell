@@ -13,11 +13,18 @@ export default function Home({
     return (
         <>
             <section className="home-intro">
-                <h2>Build a healthier day with StayWell</h2>
+                <div className="home-text">
+                    <h2>Build a healthier day with StayWell</h2>
 
-                <p>
-                    Choose your wellness goal and available time to create a personalized daily plan.
-                </p>
+                    <p>
+                        Choose your wellness goal and available time to create a personalized daily plan.
+                    </p>
+                </div>
+                <img
+                    src="/home.png"
+                    alt="Plant, water bottle, and lemon water representing a healthy lifestyle"
+                    className="home-image"
+                />
             </section>
 
             <GoalSelector
