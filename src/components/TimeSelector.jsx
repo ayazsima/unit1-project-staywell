@@ -7,6 +7,7 @@ export default function TimeSelector({ selectedTime, setSelectedTime }) {
 
             <h2>How much time can you dedicate today?</h2>
             <div className="time-options">
+                {/* Create a button for each time option */}
                 {times.map((time) => (
                     <button
                         className={selectedTime === time ? "time-button selected" : "time-button"}

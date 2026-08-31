@@ -3,6 +3,7 @@ import Button from "./Button";
 import "./DailyPlan.css";
 
 export default function DailyPlan({ selectedGoal, selectedTime, handleSavePlan }) {
+    // Get the plan data based on the selected goal and time
     const goalData = wellnessData[selectedGoal];
     const dailyPlan = goalData.plans[selectedTime];
 

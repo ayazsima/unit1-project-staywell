@@ -10,6 +10,7 @@ export default function ContactForm() {
     const [message, setMessage] = useState("");
     const [messageStatus, setMessageStatus] = useState("");
 
+    // Check the form fields before submitting
     function handleSubmit(event) {
         event.preventDefault();
 

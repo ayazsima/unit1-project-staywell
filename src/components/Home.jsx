@@ -31,14 +31,14 @@ export default function Home({
                 selectedGoal={selectedGoal}
                 setSelectedGoal={handleGoalSelect}
             />
-
+            {/* Show time options after a goal is selected */}
             {selectedGoal && (
                 <TimeSelector
                     selectedTime={selectedTime}
                     setSelectedTime={setSelectedTime}
                 />
             )}
-
+            {/* Show the daily plan after goal and time are selected */}
             {selectedGoal && selectedTime && (
                 <DailyPlan
                     selectedGoal={selectedGoal}
