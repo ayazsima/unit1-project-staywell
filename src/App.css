@@ -17,7 +17,7 @@ h1 {
 
 @media (max-width: 768px) {
   .plan-columns {
-    flex-direction: column;
+      grid-template-columns: 1fr;
   }
     .goal-options {
     grid-template-columns: 200px;
@@ -36,5 +36,13 @@ h1 {
   .time-options {
     flex-direction: column;
     align-items: center;
+  }
+    .home-intro {
+    flex-direction: column;
+  }
+
+  .home-text,
+  .home-image {
+    width: 100%;
   }
 }
