@@ -42,7 +42,7 @@ export default function ContactForm() {
     }
     return (
         <div className="contact-form">
-            <h2>Get Support</h2>
+            <h3>Get Support</h3>
             <p>Need more help with your wellness journey? Send us a message.</p>
 
             <form onSubmit={handleSubmit}>

@@ -11,7 +11,7 @@ export default function SavedPlans({ savedPlan, handleRemoveSavedPlan }) {
             </p>
 
             <h3>
-                {savedPlan.goal} - {savedPlan.time} minutes
+                {savedPlan.goal} - {savedPlan.time === 30 ? "30+" : savedPlan.time} minutes
             </h3>
 
             <div className="plan-columns">
