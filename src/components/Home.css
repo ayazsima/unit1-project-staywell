@@ -1,5 +1,15 @@
 .home-intro {
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.home-text {
+  width: 50%;
+}
+
+.home-image {
+  width: 50%;
 }
 
 .home-intro h2 {
