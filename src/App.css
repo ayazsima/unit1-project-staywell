@@ -14,35 +14,40 @@ h1 {
   color: #35633d;
   font-size: 18px;
 }
-
 @media (max-width: 768px) {
-  .plan-columns {
-      grid-template-columns: 1fr;
+
+  .daily-plan .plan-columns {
+    grid-template-columns: 1fr;
   }
-    .goal-options {
+
+  .goal-section .goal-options {
     grid-template-columns: 200px;
   }
 
-  .goal-button:last-child {
+  .goal-section .goal-button:last-child {
     grid-column: auto;
+    justify-self: stretch;
   }
 }
+
 @media (max-width: 480px) {
-  .goal-button {
+
+  .goal-section .goal-button {
     width: 180px;
     height: 100px;
   }
 
-  .time-options {
+  .time-section .time-options {
     flex-direction: column;
     align-items: center;
   }
-    .home-intro {
+
+  .home-intro {
     flex-direction: column;
   }
 
-  .home-text,
-  .home-image {
+  .home-intro .home-text,
+  .home-intro .home-image {
     width: 100%;
   }
 }
