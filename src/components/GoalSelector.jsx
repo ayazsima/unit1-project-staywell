@@ -10,7 +10,7 @@ export default function GoalSelector({ selectedGoal, setSelectedGoal }) {
     ];
     return (
         <section className="goal-section">
-            <h2>What would you improve today?</h2>
+            <h2>What would you like to improve today?</h2>
             <div className="goal-options">
                 {/* Create a button for each goal */}
                 {goals.map((goal) => (
